@@ -1,0 +1,350 @@
+.aboutme{
+    width: 90%;
+    margin: 5vh 2vw;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    font-weight: 590;
+}
+.detail_skill{
+    width: 90%;
+    margin: 0 2vw;
+    display: flex;
+}
+.extradetails{
+    flex: 0 0 50%;
+}
+.detail{
+    display: flex;
+    width: 100%;
+    margin: 0 0 2vh 0;
+}
+.detail span{
+    flex: 0 0 40%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    color: #d8cfc9ba;
+}
+.detail p{
+    width: fit-content;
+    padding: 0.5vh 0.54vw;
+    font-size: 16.2px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 520;
+    letter-spacing: 0.85px;
+}
+.btn a{
+    color: black;
+    text-decoration: none;
+}
+.overlay{
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    color: red;
+    transform: translate(-50%,-50%);
+    animation: blink 0.45s linear;
+}
+.skillandEdu{
+    flex: 0 0 50%;
+}
+.skills{
+    margin-left: 5vw;
+}
+.skill{
+    position: relative;
+    width: 100%;
+    margin-bottom: 2vh;
+}
+.sktitle{
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 1.59px;
+}
+.strength-bar{
+    position: relative;
+    width: 80%;
+    height: 1vh;
+    background-color: rgb(244, 239, 239);
+    border-radius: 4px;
+    margin-left: 1vw;
+    margin-top: 1.8vh;
+}
+.strength-bar span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1vh;
+    background-color: #094469;
+    border-radius: 4px;
+    animation: progressBar 2.5s ease-in-out;
+}
+.strength-percentage{
+    position: absolute;
+    top: 10px;
+    right: 8vw;
+}
+.switch{
+    margin-bottom: 10px;
+}
+.switch p{
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 15px;
+    cursor: pointer;
+}
+.underline{
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: red;
+    top: 100%;
+    left: 15px;
+    border-radius: 5px;
+}
+.sktabActive{
+    width: 55%;
+    animation: progressBar 0.3s linear;
+}
+.sktabClose{
+    width: 0%;
+    animation: deprogress 0.3s linear;
+}
+.edu{
+    position: relative;
+    display: flex;
+    height: 100%;
+    margin-top: 16px;
+}
+.edu::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5px;
+    top: 50%;
+    background-color: white;
+    z-index: -1;
+    margin-top: 8px;
+    border-radius: 10px;
+    animation: timeline 2s  linear forwards;
+}
+.eduItem{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    background-color: rgb(123, 28, 28);
+    border-radius: 10px;
+    margin: 0 10px;
+    width: 15vw;
+    opacity: 0;
+}
+.eduItem:nth-child(2){
+    animation-delay: 1s;
+}
+.eduItem:nth-child(3){
+    animation-delay: 2s;
+}
+.top::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(99, 28, 170);
+}
+.bottom::after{
+    content: '';
+    position: absolute;
+    top: -13%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(99, 28, 170);
+}
+.institute{
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 0 0 10px;
+}
+.courseName{
+    margin: 5px 0 0 10px;
+    font-family: 'Rubik', sans-serif;
+}
+.percent{
+    margin: 5px 0 0 10px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 0.9rem;
+}
+.duration{
+    margin: 5px 0 0 10px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 0.7rem;
+}
+.top{
+    top: 0%;
+    margin-bottom: 25px;
+    animation: fadetop 1s  forwards linear;
+}
+.bottom{
+    top: 50%;
+    margin-top: 20px;
+    animation: fadedown 1s  forwards linear;
+}
+@keyframes blink {
+    0%{
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+    100%{
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+   
+}
+@keyframes progressBar{
+    0%{
+        width: 0%;
+    }
+}
+@keyframes deprogress{
+    0%{ width: 55%; }
+    100%{ width: 0%; }
+}
+@keyframes timeline {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes timelineRes {
+    0%{
+        height: 0%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+@keyframes fadetop {
+    0%{
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes fadedown {
+    0%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@media screen and (max-width:964px) {
+    .detail_skill{
+        flex-direction: column;
+    }
+    .extradetails{
+        flex: 0 0 100%;
+    }
+    .skillandEdu{
+        flex: 0 0 100%;
+        margin: 40px 0;
+    }
+    .edu{
+        margin-left: 0px;
+        flex-direction: column;
+    }
+    .edu::after{
+        height: 100%;
+        width: 5px;
+        top: 0;
+        left: 50%;
+        margin-top: 0;
+        margin-left: 15px;
+        animation: timelineRes 2s  linear forwards;
+    }
+    .eduItem{
+        /* flex-direction: row; */
+        width: 50%;
+    }
+    .institute{
+        margin: 10px 10px 1px 10px;
+    }
+    .duration{
+        margin: 5px 0 5px 10px;
+    }
+    .top{
+        top: 0%;
+        margin-bottom: 0;
+        margin-right: 25px;
+        animation: fadetop 1s  forwards linear;
+    }
+    .bottom{
+        top: 0%;
+        left: 50%;
+        margin-top: 0;
+        margin-left: 25px;
+        animation: fadedown 1s  forwards linear;
+    }
+    .top::after{
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .bottom::after{
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .strength-percentage{
+        right: 17vw;
+    }
+}
+@media  screen and (max-width:374px) {
+    .aboutme{
+        font-size: 1.15rem;
+    }
+    .sktitle{
+        font-size: 0.7rem;
+    }
+    .btn{
+        font-size: 0.9rem;
+    }    
+}
+@media  screen and (max-width:230px) {
+    .institute{
+        font-size: 0.75rem;
+        margin-left: 3px;
+    }
+    .courseName{
+        font-size: 0.65rem;
+        margin-left: 3px;
+    }
+    .percent{
+        font-size: 0.55rem;
+        margin-left: 3px;
+    }
+    .duration{
+        font-size: 0.5rem;
+        margin-left: 3px;
+    }
+}

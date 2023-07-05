@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Montserrat&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+@import url("./utility.css");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(19, 18, 18);
+}
+/* Main Section CSS */
+.Main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.headBox{
+    flex: 0 0 60%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ImgBox{
+    flex: 0 0 40%;
+}
+.headingMain{
+    font-size: 4.8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    margin: 1rem 3.2rem;
+    text-shadow: 3px 2px 5px rgb(33, 17, 17);
+}
+.headingMain span{
+    font-family: 'Clicker Script', cursive;
+}
+.heroImg{
+    width: 29vw;
+    border-radius: 10px;
+    height: 100%;
+}
+.imageCover{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 12px 2px blue;
+    border-radius: 10px;
+}
+.buttons{
+    width: 24%;
+    margin: 1.1rem 3.2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.littleAbout{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: flex 5s linear;
+    font-size: 1.9rem;
+    font-family: sans-serif, serif;
+    margin: 1rem 3.2rem;
+}
+.littleAbout span{
+    font-family: 'Mogra', cursive;
+    font-size: 2.5rem;
+}
+.homeDetail{
+    font-family: 'Acme', sans-serif;
+    font-size: 1.25rem;
+    margin: 0rem 3.2rem;
+    letter-spacing: 1.25px;
+}
+.social-icons {
+    margin-top: 30px;
+    margin-left: 3.2rem;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+@media screen and (max-width:961px) {
+    .headingMain{
+        font-size: 2.5rem;
+    }
+    .homeDetail{
+        font-size: 1.1rem;
+    }
+    .littleAbout span{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:870px) {
+    .headingMain{
+        font-size: 2rem;
+    }
+    .homeDetail{
+        font-size: 1rem;
+    }
+    .littleAbout span{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:771px) {
+    .heroImg{
+        width: 25vw;
+    }
+}
+@media screen and (max-width:713px) {
+    .Main{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .headingMain{
+        font-size: 1.85rem;
+        margin: 1rem 0;
+    }
+    .headBox{
+        align-items: center;
+    }
+    .littleAbout{
+        font-size: 3.75vw;
+        margin: 1rem 0;
+    }
+    .ImgBox{
+        flex: 0 0 100%;
+    }
+    .heroImg{
+        width: 23vw;
+    }
+    .homeDetail{
+        font-size: 0.85rem;
+        margin: 1rem 0;
+        text-align: center;
+    }
+    .social-icons{
+        margin: 1rem 0;
+    }
+    .buttons{
+        font-size: 2vw;
+    }
+}
+@media screen and (max-width:420px) {
+    .headingMain{
+        font-size: 1.25rem;
+    }
+    .homeDetail{
+        font-size: 0.95rem;
+    }
+    .littleAbout span{
+        font-size: 1rem;
+    }
+}
+.change{
+    position: relative;
+    color: rgb(6, 75, 149);
+    font-family: 'Roboto Slab', sans-serif;
+    text-transform: capitalize;
+    margin: 0 15px;
+}
+.animClass1{
+    animation: transit1 1s 1 linear;
+}
+.animClass2{
+    animation: transit2 1s 1 linear;
+}
+@keyframes transit1 {
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes transit2 {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+}
